@@ -3,7 +3,5 @@ module(
     version = "1.0",
 )
 
-bazel_dep(name = "rules_cc", version = "0.0.9")
-bazel_dep(name = "rules_proto", version = "6.0.0-rc2")
-bazel_dep(name = "rules_java", version = "7.3.0")
+
 bazel_dep(name = "protobuf", version = "23.1", repo_name = "com_google_protobuf")

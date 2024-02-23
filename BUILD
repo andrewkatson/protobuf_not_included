@@ -12,7 +12,8 @@ platform(
 cc_binary(
 name = "test",
 srcs = ["test.cpp"],
-deps = [":test_proto_cc"],
+deps = [":test_proto_cc",         "@com_google_protobuf//:protobuf",
+        "@com_google_protobuf//:protobuf_headers",],
 )
 
 proto_library(
