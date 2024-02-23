@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package protobuf_not_included;
+
+message TestProto {
+  double val = 1;
+}
