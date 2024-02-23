@@ -1,3 +1,4 @@
+package(default_visibility = ["//visibility:public"])
 
 platform(
     name = "windows-mingw-gcc",
