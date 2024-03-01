@@ -1,9 +1,10 @@
 {
   "lockFileVersion": 3,
-  "moduleFileHash": "cf5accc1904bf4fa5fd7f0d160690863ea0a9d44c4afe80a4b0500a61408a14b",
+  "moduleFileHash": "bbf3decd4662a987252214ad7378fa74b1c7f672c32833e15ab097aa94ec8ea3",
   "flags": {
     "cmdRegistries": [
-      "https://bcr.bazel.build/"
+      "https://raw.githubusercontent.com/bazelboost/registry/main",
+      "https://bcr.bazel.build"
     ],
     "cmdModuleOverrides": {},
     "allowedYankedVersions": [],
@@ -26,6 +27,7 @@
       "extensionUsages": [],
       "deps": {
         "com_google_protobuf": "protobuf@23.1",
+        "boost.chrono": "boost.chrono@1.83.0.bzl.1",
         "bazel_tools": "bazel_tools@_",
         "local_config_platform": "local_config_platform@_"
       }
@@ -133,6 +135,49 @@
             "https://bcr.bazel.build/modules/protobuf/23.1/patches/0007-bazel-Get-rid-of-exec_tools.-13401.patch": "sha256-Thj5ZYqMpgaUrjZv8XyWqyD+I6XQNcZjo4jI14a7QxE="
           },
           "remote_patch_strip": 1
+        }
+      }
+    },
+    "boost.chrono@1.83.0.bzl.1": {
+      "name": "boost.chrono",
+      "version": "1.83.0.bzl.1",
+      "key": "boost.chrono@1.83.0.bzl.1",
+      "repoName": "boost.chrono",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [],
+      "extensionUsages": [],
+      "deps": {
+        "rules_cc": "rules_cc@0.0.9",
+        "boost.assert": "boost.assert@1.83.0.bzl.1",
+        "boost.config": "boost.config@1.83.0.bzl.6",
+        "boost.core": "boost.core@1.83.0.bzl.1",
+        "boost.integer": "boost.integer@1.83.0.bzl.1",
+        "boost.move": "boost.move@1.83.0.bzl.1",
+        "boost.mpl": "boost.mpl@1.83.0.bzl.1",
+        "boost.predef": "boost.predef@1.83.0.bzl.1",
+        "boost.ratio": "boost.ratio@1.83.0.bzl.1",
+        "boost.static_assert": "boost.static_assert@1.83.0.bzl.1",
+        "boost.system": "boost.system@1.83.0.bzl.1",
+        "boost.throw_exception": "boost.throw_exception@1.83.0.bzl.1",
+        "boost.type_traits": "boost.type_traits@1.83.0.bzl.1",
+        "boost.typeof": "boost.typeof@1.83.0.bzl.1",
+        "boost.utility": "boost.utility@1.83.0.bzl.1",
+        "boost.winapi": "boost.winapi@1.83.0.bzl.1",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "boost.chrono~1.83.0.bzl.1",
+          "urls": [
+            "https://github.com/bazelboost/chrono/releases/download/bazelboost-1.83.0.bzl.1/chrono-bazelboost-1.83.0.bzl.1.tar.gz"
+          ],
+          "integrity": "sha256-xZI9hWFJRElk6uDb8bon2i+VjX7jDaNMxWrm0qj0G7I=",
+          "strip_prefix": "",
+          "remote_patches": {},
+          "remote_patch_strip": 0
         }
       }
     },
@@ -850,6 +895,474 @@
         }
       }
     },
+    "boost.assert@1.83.0.bzl.1": {
+      "name": "boost.assert",
+      "version": "1.83.0.bzl.1",
+      "key": "boost.assert@1.83.0.bzl.1",
+      "repoName": "boost.assert",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [],
+      "extensionUsages": [],
+      "deps": {
+        "rules_cc": "rules_cc@0.0.9",
+        "boost.config": "boost.config@1.83.0.bzl.6",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "boost.assert~1.83.0.bzl.1",
+          "urls": [
+            "https://github.com/bazelboost/assert/releases/download/bazelboost-1.83.0.bzl.1/assert-bazelboost-1.83.0.bzl.1.tar.gz"
+          ],
+          "integrity": "sha256-+gnBj6IFJBuxuMFbhz40we87p6vnucXRGv/Xubz65Vw=",
+          "strip_prefix": "",
+          "remote_patches": {},
+          "remote_patch_strip": 0
+        }
+      }
+    },
+    "boost.config@1.83.0.bzl.6": {
+      "name": "boost.config",
+      "version": "1.83.0.bzl.6",
+      "key": "boost.config@1.83.0.bzl.6",
+      "repoName": "boost.config",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [],
+      "extensionUsages": [],
+      "deps": {
+        "rules_cc": "rules_cc@0.0.9",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "boost.config~1.83.0.bzl.6",
+          "urls": [
+            "https://github.com/bazelboost/config/releases/download/bazelboost-1.83.0.bzl.6/config-bazelboost-1.83.0.bzl.6.tar.gz"
+          ],
+          "integrity": "sha256-o1Y+tXwECAEDbjKJyJj10CLBgKCPThOvYKcXHAECu+E=",
+          "strip_prefix": "",
+          "remote_patches": {},
+          "remote_patch_strip": 0
+        }
+      }
+    },
+    "boost.core@1.83.0.bzl.1": {
+      "name": "boost.core",
+      "version": "1.83.0.bzl.1",
+      "key": "boost.core@1.83.0.bzl.1",
+      "repoName": "boost.core",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [],
+      "extensionUsages": [],
+      "deps": {
+        "rules_cc": "rules_cc@0.0.9",
+        "boost.assert": "boost.assert@1.83.0.bzl.1",
+        "boost.config": "boost.config@1.83.0.bzl.6",
+        "boost.static_assert": "boost.static_assert@1.83.0.bzl.1",
+        "boost.throw_exception": "boost.throw_exception@1.83.0.bzl.1",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "boost.core~1.83.0.bzl.1",
+          "urls": [
+            "https://github.com/bazelboost/core/releases/download/bazelboost-1.83.0.bzl.1/core-bazelboost-1.83.0.bzl.1.tar.gz"
+          ],
+          "integrity": "sha256-I32C8IlJC+dNlbt8X1uLpje5BorFLfZ++P01tS++/S0=",
+          "strip_prefix": "",
+          "remote_patches": {},
+          "remote_patch_strip": 0
+        }
+      }
+    },
+    "boost.integer@1.83.0.bzl.1": {
+      "name": "boost.integer",
+      "version": "1.83.0.bzl.1",
+      "key": "boost.integer@1.83.0.bzl.1",
+      "repoName": "boost.integer",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [],
+      "extensionUsages": [],
+      "deps": {
+        "rules_cc": "rules_cc@0.0.9",
+        "boost.assert": "boost.assert@1.83.0.bzl.1",
+        "boost.config": "boost.config@1.83.0.bzl.6",
+        "boost.core": "boost.core@1.83.0.bzl.1",
+        "boost.static_assert": "boost.static_assert@1.83.0.bzl.1",
+        "boost.throw_exception": "boost.throw_exception@1.83.0.bzl.1",
+        "boost.type_traits": "boost.type_traits@1.83.0.bzl.1",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "boost.integer~1.83.0.bzl.1",
+          "urls": [
+            "https://github.com/bazelboost/integer/releases/download/bazelboost-1.83.0.bzl.1/integer-bazelboost-1.83.0.bzl.1.tar.gz"
+          ],
+          "integrity": "sha256-rGXti0LaMD/aJLLSie7BeDj9sgvHbQ9lvMp9YK6fnF8=",
+          "strip_prefix": "",
+          "remote_patches": {},
+          "remote_patch_strip": 0
+        }
+      }
+    },
+    "boost.move@1.83.0.bzl.1": {
+      "name": "boost.move",
+      "version": "1.83.0.bzl.1",
+      "key": "boost.move@1.83.0.bzl.1",
+      "repoName": "boost.move",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [],
+      "extensionUsages": [],
+      "deps": {
+        "rules_cc": "rules_cc@0.0.9",
+        "boost.config": "boost.config@1.83.0.bzl.6",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "boost.move~1.83.0.bzl.1",
+          "urls": [
+            "https://github.com/bazelboost/move/releases/download/bazelboost-1.83.0.bzl.1/move-bazelboost-1.83.0.bzl.1.tar.gz"
+          ],
+          "integrity": "sha256-iVjElGiJwKTghHxG3HdtzutgyYkvoY8+3ncJVYnMj9E=",
+          "strip_prefix": "",
+          "remote_patches": {},
+          "remote_patch_strip": 0
+        }
+      }
+    },
+    "boost.mpl@1.83.0.bzl.1": {
+      "name": "boost.mpl",
+      "version": "1.83.0.bzl.1",
+      "key": "boost.mpl@1.83.0.bzl.1",
+      "repoName": "boost.mpl",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [],
+      "extensionUsages": [],
+      "deps": {
+        "rules_cc": "rules_cc@0.0.9",
+        "boost.config": "boost.config@1.83.0.bzl.6",
+        "boost.core": "boost.core@1.83.0.bzl.1",
+        "boost.predef": "boost.predef@1.83.0.bzl.1",
+        "boost.preprocessor": "boost.preprocessor@1.83.0.bzl.1",
+        "boost.static_assert": "boost.static_assert@1.83.0.bzl.1",
+        "boost.type_traits": "boost.type_traits@1.83.0.bzl.1",
+        "boost.utility": "boost.utility@1.83.0.bzl.1",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "boost.mpl~1.83.0.bzl.1",
+          "urls": [
+            "https://github.com/bazelboost/mpl/releases/download/bazelboost-1.83.0.bzl.1/mpl-bazelboost-1.83.0.bzl.1.tar.gz"
+          ],
+          "integrity": "sha256-J7MdyTQXW8aXhNOHpeRxsT2dho0msblySA0uLwQwEgk=",
+          "strip_prefix": "",
+          "remote_patches": {},
+          "remote_patch_strip": 0
+        }
+      }
+    },
+    "boost.predef@1.83.0.bzl.1": {
+      "name": "boost.predef",
+      "version": "1.83.0.bzl.1",
+      "key": "boost.predef@1.83.0.bzl.1",
+      "repoName": "boost.predef",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [],
+      "extensionUsages": [],
+      "deps": {
+        "rules_cc": "rules_cc@0.0.9",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "boost.predef~1.83.0.bzl.1",
+          "urls": [
+            "https://github.com/bazelboost/predef/releases/download/bazelboost-1.83.0.bzl.1/predef-bazelboost-1.83.0.bzl.1.tar.gz"
+          ],
+          "integrity": "sha256-maKSi0FusUu7qzB9eYDMraF/euhJV+ap5sJQMEqGfOw=",
+          "strip_prefix": "",
+          "remote_patches": {},
+          "remote_patch_strip": 0
+        }
+      }
+    },
+    "boost.ratio@1.83.0.bzl.1": {
+      "name": "boost.ratio",
+      "version": "1.83.0.bzl.1",
+      "key": "boost.ratio@1.83.0.bzl.1",
+      "repoName": "boost.ratio",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [],
+      "extensionUsages": [],
+      "deps": {
+        "rules_cc": "rules_cc@0.0.9",
+        "boost.config": "boost.config@1.83.0.bzl.6",
+        "boost.core": "boost.core@1.83.0.bzl.1",
+        "boost.integer": "boost.integer@1.83.0.bzl.1",
+        "boost.mpl": "boost.mpl@1.83.0.bzl.1",
+        "boost.rational": "boost.rational@1.83.0.bzl.1",
+        "boost.static_assert": "boost.static_assert@1.83.0.bzl.1",
+        "boost.type_traits": "boost.type_traits@1.83.0.bzl.1",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "boost.ratio~1.83.0.bzl.1",
+          "urls": [
+            "https://github.com/bazelboost/ratio/releases/download/bazelboost-1.83.0.bzl.1/ratio-bazelboost-1.83.0.bzl.1.tar.gz"
+          ],
+          "integrity": "sha256-8C8mfb0dubnjD12//zGUvS0BlrSbVpOUXPOHXQRBWco=",
+          "strip_prefix": "",
+          "remote_patches": {},
+          "remote_patch_strip": 0
+        }
+      }
+    },
+    "boost.static_assert@1.83.0.bzl.1": {
+      "name": "boost.static_assert",
+      "version": "1.83.0.bzl.1",
+      "key": "boost.static_assert@1.83.0.bzl.1",
+      "repoName": "boost.static_assert",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [],
+      "extensionUsages": [],
+      "deps": {
+        "rules_cc": "rules_cc@0.0.9",
+        "boost.config": "boost.config@1.83.0.bzl.6",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "boost.static_assert~1.83.0.bzl.1",
+          "urls": [
+            "https://github.com/bazelboost/static_assert/releases/download/bazelboost-1.83.0.bzl.1/static_assert-bazelboost-1.83.0.bzl.1.tar.gz"
+          ],
+          "integrity": "sha256-SkUocUHU6z2Nie1d2CX6AIAhbQ5/e2poNC9FkPScrlE=",
+          "strip_prefix": "",
+          "remote_patches": {},
+          "remote_patch_strip": 0
+        }
+      }
+    },
+    "boost.system@1.83.0.bzl.1": {
+      "name": "boost.system",
+      "version": "1.83.0.bzl.1",
+      "key": "boost.system@1.83.0.bzl.1",
+      "repoName": "boost.system",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [],
+      "extensionUsages": [],
+      "deps": {
+        "rules_cc": "rules_cc@0.0.9",
+        "boost.assert": "boost.assert@1.83.0.bzl.1",
+        "boost.config": "boost.config@1.83.0.bzl.6",
+        "boost.throw_exception": "boost.throw_exception@1.83.0.bzl.1",
+        "boost.variant2": "boost.variant2@1.83.0.bzl.1",
+        "boost.winapi": "boost.winapi@1.83.0.bzl.1",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "boost.system~1.83.0.bzl.1",
+          "urls": [
+            "https://github.com/bazelboost/system/releases/download/bazelboost-1.83.0.bzl.1/system-bazelboost-1.83.0.bzl.1.tar.gz"
+          ],
+          "integrity": "sha256-QVoJv0SmrV8oe44NMFL1pr2b/Hr1idFiacoc27XCYrg=",
+          "strip_prefix": "",
+          "remote_patches": {},
+          "remote_patch_strip": 0
+        }
+      }
+    },
+    "boost.throw_exception@1.83.0.bzl.1": {
+      "name": "boost.throw_exception",
+      "version": "1.83.0.bzl.1",
+      "key": "boost.throw_exception@1.83.0.bzl.1",
+      "repoName": "boost.throw_exception",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [],
+      "extensionUsages": [],
+      "deps": {
+        "rules_cc": "rules_cc@0.0.9",
+        "boost.assert": "boost.assert@1.83.0.bzl.1",
+        "boost.config": "boost.config@1.83.0.bzl.6",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "boost.throw_exception~1.83.0.bzl.1",
+          "urls": [
+            "https://github.com/bazelboost/throw_exception/releases/download/bazelboost-1.83.0.bzl.1/throw_exception-bazelboost-1.83.0.bzl.1.tar.gz"
+          ],
+          "integrity": "sha256-SE5vLbktJC0nYTR6AwrVP+PgwjMHuBPqTrTjoINUe2Y=",
+          "strip_prefix": "",
+          "remote_patches": {},
+          "remote_patch_strip": 0
+        }
+      }
+    },
+    "boost.type_traits@1.83.0.bzl.1": {
+      "name": "boost.type_traits",
+      "version": "1.83.0.bzl.1",
+      "key": "boost.type_traits@1.83.0.bzl.1",
+      "repoName": "boost.type_traits",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [],
+      "extensionUsages": [],
+      "deps": {
+        "rules_cc": "rules_cc@0.0.9",
+        "boost.config": "boost.config@1.83.0.bzl.6",
+        "boost.static_assert": "boost.static_assert@1.83.0.bzl.1",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "boost.type_traits~1.83.0.bzl.1",
+          "urls": [
+            "https://github.com/bazelboost/type_traits/releases/download/bazelboost-1.83.0.bzl.1/type_traits-bazelboost-1.83.0.bzl.1.tar.gz"
+          ],
+          "integrity": "sha256-b9Fsi1hqDRBM9a4sAz0+A7wns8PGSi2KIjEZ6qNmXb0=",
+          "strip_prefix": "",
+          "remote_patches": {},
+          "remote_patch_strip": 0
+        }
+      }
+    },
+    "boost.typeof@1.83.0.bzl.1": {
+      "name": "boost.typeof",
+      "version": "1.83.0.bzl.1",
+      "key": "boost.typeof@1.83.0.bzl.1",
+      "repoName": "boost.typeof",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [],
+      "extensionUsages": [],
+      "deps": {
+        "rules_cc": "rules_cc@0.0.9",
+        "boost.config": "boost.config@1.83.0.bzl.6",
+        "boost.preprocessor": "boost.preprocessor@1.83.0.bzl.1",
+        "boost.type_traits": "boost.type_traits@1.83.0.bzl.1",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "boost.typeof~1.83.0.bzl.1",
+          "urls": [
+            "https://github.com/bazelboost/typeof/releases/download/bazelboost-1.83.0.bzl.1/typeof-bazelboost-1.83.0.bzl.1.tar.gz"
+          ],
+          "integrity": "sha256-K48ko7AxFwJ3pIHOQ/qwaymSBIpzYf+/hMBSViwLdu0=",
+          "strip_prefix": "",
+          "remote_patches": {},
+          "remote_patch_strip": 0
+        }
+      }
+    },
+    "boost.utility@1.83.0.bzl.1": {
+      "name": "boost.utility",
+      "version": "1.83.0.bzl.1",
+      "key": "boost.utility@1.83.0.bzl.1",
+      "repoName": "boost.utility",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [],
+      "extensionUsages": [],
+      "deps": {
+        "rules_cc": "rules_cc@0.0.9",
+        "boost.assert": "boost.assert@1.83.0.bzl.1",
+        "boost.config": "boost.config@1.83.0.bzl.6",
+        "boost.core": "boost.core@1.83.0.bzl.1",
+        "boost.io": "boost.io@1.83.0.bzl.1",
+        "boost.preprocessor": "boost.preprocessor@1.83.0.bzl.1",
+        "boost.throw_exception": "boost.throw_exception@1.83.0.bzl.1",
+        "boost.type_traits": "boost.type_traits@1.83.0.bzl.1",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "boost.utility~1.83.0.bzl.1",
+          "urls": [
+            "https://github.com/bazelboost/utility/releases/download/bazelboost-1.83.0.bzl.1/utility-bazelboost-1.83.0.bzl.1.tar.gz"
+          ],
+          "integrity": "sha256-T7NE8zouucceud/lWIjSLhCLffm3cVgQzIIw805irRc=",
+          "strip_prefix": "",
+          "remote_patches": {},
+          "remote_patch_strip": 0
+        }
+      }
+    },
+    "boost.winapi@1.83.0.bzl.1": {
+      "name": "boost.winapi",
+      "version": "1.83.0.bzl.1",
+      "key": "boost.winapi@1.83.0.bzl.1",
+      "repoName": "boost.winapi",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [],
+      "extensionUsages": [],
+      "deps": {
+        "rules_cc": "rules_cc@0.0.9",
+        "boost.config": "boost.config@1.83.0.bzl.6",
+        "boost.predef": "boost.predef@1.83.0.bzl.1",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "boost.winapi~1.83.0.bzl.1",
+          "urls": [
+            "https://github.com/bazelboost/winapi/releases/download/bazelboost-1.83.0.bzl.1/winapi-bazelboost-1.83.0.bzl.1.tar.gz"
+          ],
+          "integrity": "sha256-nrAtw302Q79htiAjVo1yaFDT+dj5y8SLJCv620jMcrI=",
+          "strip_prefix": "",
+          "remote_patches": {},
+          "remote_patch_strip": 0
+        }
+      }
+    },
     "rules_license@0.0.7": {
       "name": "rules_license",
       "version": "0.0.7",
@@ -954,6 +1467,158 @@
           "remote_patches": {
             "https://bcr.bazel.build/modules/stardoc/0.5.1/patches/module_dot_bazel.patch": "sha256-UAULCuTpJE7SG0YrR9XLjMfxMRmbP+za3uW9ONZ5rjI="
           },
+          "remote_patch_strip": 0
+        }
+      }
+    },
+    "boost.preprocessor@1.83.0.bzl.1": {
+      "name": "boost.preprocessor",
+      "version": "1.83.0.bzl.1",
+      "key": "boost.preprocessor@1.83.0.bzl.1",
+      "repoName": "boost.preprocessor",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [],
+      "extensionUsages": [],
+      "deps": {
+        "rules_cc": "rules_cc@0.0.9",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "boost.preprocessor~1.83.0.bzl.1",
+          "urls": [
+            "https://github.com/bazelboost/preprocessor/releases/download/bazelboost-1.83.0.bzl.1/preprocessor-bazelboost-1.83.0.bzl.1.tar.gz"
+          ],
+          "integrity": "sha256-FM4l16k3YYuUyviJJ0ShnjacAd70qKO8Kw50GEI5XFM=",
+          "strip_prefix": "",
+          "remote_patches": {},
+          "remote_patch_strip": 0
+        }
+      }
+    },
+    "boost.rational@1.83.0.bzl.1": {
+      "name": "boost.rational",
+      "version": "1.83.0.bzl.1",
+      "key": "boost.rational@1.83.0.bzl.1",
+      "repoName": "boost.rational",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [],
+      "extensionUsages": [],
+      "deps": {
+        "rules_cc": "rules_cc@0.0.9",
+        "boost.assert": "boost.assert@1.83.0.bzl.1",
+        "boost.config": "boost.config@1.83.0.bzl.6",
+        "boost.core": "boost.core@1.83.0.bzl.1",
+        "boost.integer": "boost.integer@1.83.0.bzl.1",
+        "boost.static_assert": "boost.static_assert@1.83.0.bzl.1",
+        "boost.throw_exception": "boost.throw_exception@1.83.0.bzl.1",
+        "boost.type_traits": "boost.type_traits@1.83.0.bzl.1",
+        "boost.utility": "boost.utility@1.83.0.bzl.1",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "boost.rational~1.83.0.bzl.1",
+          "urls": [
+            "https://github.com/bazelboost/rational/releases/download/bazelboost-1.83.0.bzl.1/rational-bazelboost-1.83.0.bzl.1.tar.gz"
+          ],
+          "integrity": "sha256-F7zoLpAWf+c1aG3QYxAj0rf8ctP/6ua5A5QDVsW4V7c=",
+          "strip_prefix": "",
+          "remote_patches": {},
+          "remote_patch_strip": 0
+        }
+      }
+    },
+    "boost.variant2@1.83.0.bzl.1": {
+      "name": "boost.variant2",
+      "version": "1.83.0.bzl.1",
+      "key": "boost.variant2@1.83.0.bzl.1",
+      "repoName": "boost.variant2",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [],
+      "extensionUsages": [],
+      "deps": {
+        "rules_cc": "rules_cc@0.0.9",
+        "boost.assert": "boost.assert@1.83.0.bzl.1",
+        "boost.config": "boost.config@1.83.0.bzl.6",
+        "boost.mp11": "boost.mp11@1.83.0.bzl.1",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "boost.variant2~1.83.0.bzl.1",
+          "urls": [
+            "https://github.com/bazelboost/variant2/releases/download/bazelboost-1.83.0.bzl.1/variant2-bazelboost-1.83.0.bzl.1.tar.gz"
+          ],
+          "integrity": "sha256-+hj7v9IXiXdntpCwQgeQKZPQNlGd0SVZVwerS1IJXE0=",
+          "strip_prefix": "",
+          "remote_patches": {},
+          "remote_patch_strip": 0
+        }
+      }
+    },
+    "boost.io@1.83.0.bzl.1": {
+      "name": "boost.io",
+      "version": "1.83.0.bzl.1",
+      "key": "boost.io@1.83.0.bzl.1",
+      "repoName": "boost.io",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [],
+      "extensionUsages": [],
+      "deps": {
+        "rules_cc": "rules_cc@0.0.9",
+        "boost.config": "boost.config@1.83.0.bzl.6",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "boost.io~1.83.0.bzl.1",
+          "urls": [
+            "https://github.com/bazelboost/io/releases/download/bazelboost-1.83.0.bzl.1/io-bazelboost-1.83.0.bzl.1.tar.gz"
+          ],
+          "integrity": "sha256-ImpB2yB9beNDqszsjKdPGZ8HXENpg5t6F/zjORW6WQ0=",
+          "strip_prefix": "",
+          "remote_patches": {},
+          "remote_patch_strip": 0
+        }
+      }
+    },
+    "boost.mp11@1.83.0.bzl.1": {
+      "name": "boost.mp11",
+      "version": "1.83.0.bzl.1",
+      "key": "boost.mp11@1.83.0.bzl.1",
+      "repoName": "boost.mp11",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [],
+      "extensionUsages": [],
+      "deps": {
+        "rules_cc": "rules_cc@0.0.9",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "boost.mp11~1.83.0.bzl.1",
+          "urls": [
+            "https://github.com/bazelboost/mp11/releases/download/bazelboost-1.83.0.bzl.1/mp11-bazelboost-1.83.0.bzl.1.tar.gz"
+          ],
+          "integrity": "sha256-3i9cAvhEmsBFAM2cTQPi2btGvg6bSLaXzq7KImGLG0g=",
+          "strip_prefix": "",
+          "remote_patches": {},
           "remote_patch_strip": 0
         }
       }
